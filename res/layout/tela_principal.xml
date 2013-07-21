@@ -1,0 +1,113 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".TelaPrincipal" >
+
+    <TextView
+        android:id="@+id/txConectado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Conectado no Servidor: " />
+
+    <TextView
+        android:id="@+id/txServidor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/txConectado"
+        android:text="" />
+    
+    <TextView
+        android:id="@+id/txIP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txConectado"
+        android:text="IP: " />
+    
+    <EditText
+        android:id="@+id/edIP"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/txIP"
+        android:layout_below="@+id/txConectado"
+        android:text="" />
+    
+    <TextView
+        android:id="@+id/txTCP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edIP"
+        android:text="Porta: " />
+    
+    <EditText
+        android:id="@+id/edTCP"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edIP"
+        android:layout_toRightOf="@+id/txTCP"
+        android:text="" />
+    
+    <Button
+        android:id="@+id/btServidor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edTCP"
+        android:text="Selecionar Servidor" />
+    
+    <TextView
+        android:id="@+id/txAr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btServidor"
+        android:layout_marginTop="25px"
+        android:text="Comandos do Ar Condicionado" />
+    
+    <Button
+        android:id="@+id/btLigar"
+        android:layout_width="wrap_content"
+        android:layout_height="50px"
+        android:layout_below="@+id/txAr"
+        android:background="#CCF"
+        android:text="Ligar/Desligar" />
+    
+    <TextView
+        android:id="@+id/txTemperatura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btLigar"
+        android:layout_marginTop="25px"
+        android:text="Temperatura:" />
+    
+    <Button
+        android:id="@+id/btMenos"
+        android:layout_width="50px"
+        android:layout_height="50px"
+        android:layout_below="@+id/txTemperatura"
+        android:background="#9CF"
+        android:text="-" />
+    
+    <TextView
+        android:id="@+id/txNumero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/btMenos"
+        android:layout_marginTop="25px"
+        android:layout_marginLeft="25px"
+        android:layout_marginRight="25px"
+        android:layout_below="@+id/txTemperatura"
+        android:text="24" />
+    
+    <Button
+        android:id="@+id/btMais"
+        android:layout_width="50px"
+        android:layout_height="50px"
+        android:layout_below="@+id/txTemperatura"
+        android:layout_toRightOf="@+id/txNumero"
+        android:background="#F99"
+        android:text="+" />
+
+</RelativeLayout>
